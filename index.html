@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-five</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- DaisyUi CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind CDN -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        // bg-[#b8f36a]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="pb-4 fixed top-0 w-full z-100  backdrop-blur-lg  ">
+        <nav class="pt-4 pb-5 bg-[#e9dbbf] flex justify-around  ">
+          <div>
+            <button id="headerBlogBtn" class="bg-[#b8f36a] px-2 lg:px-7 py-1 lg:py-3 font-bold rounded-md">Blog</button>
+          </div>
+          <div class="flex items-center gap-3">
+            <img class="h-6 lg:h-10 w-7 lg:w-10" src="assets/logo.png" alt="">
+            <h2 class="lg:font-bold">Donate Bangladesh</h2>
+          </div>
+          <div class="flex items-center lg:gap-2">
+            <img src="assets/coin.png" alt="">
+            <h2 id="NavbarBalance" class="font-bold">5500</h2>
+            <p>BTD</p>
+          </div>
+    
+        </nav>
+    
+        <!-- btn  -->
+        <div class="mt-5 flex justify-center gap-5">
+          <button id="HeaderDonateBtn" class="btn  px-10 font-bold rounded-md bg-[#b8f36a] ">Donation</button>
+          <button id="HeaderHistoryBtn" class="btn   px-10 font-bold rounded-md ">History</button>
+        </div>
+      </header>
+
+    <main class="mt-[220px] mb-20 w-11/12 lg:w-8/12 mx-auto ">
+
+      <article id="DonatePart" class=" my-10 grid grid-cols-1 gap-10 ">
+      <!-- Box One -->
+        <section class="h-full lg:h-[450px] w-full p-3 lg:p-7 border rounded-xl grid grid-cols-1 lg:grid-cols-2 gap-5">
+       
+        <div class="">
+          <img class="h-full w-full" src="assets/noakhali.png" alt="">
+        </div>
+        <div class="flex flex-col justify-between gap-2 lg:gap-0">
+          <div class=" flex items-center gap-2 w-2/4 lg:w-4/12 bg-gray-100 p-1 rounded-md">
+            <img src="assets/coin.png" alt="">
+            <h2 id="BoxOneBalance" class="font-semibold">0</h2>
+            <span>BTD</span>
+          </div>
+
+          <h3 id="TitleBoxOne" class="font-bold">Donate for Flood at Noakhali, Bangladesh</h3>
+
+          <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
+            help provide
+            essential supplies and to those affected by this disaster. Every contribution, big or small, makes
+            difference. Please
+            join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+          <input id="BoxOneInputPart" type="text" placeholder="Write Donation Amount"
+            class="input input-bordered w-full " />
+
+          <button id="BoxOneDonateNowButton" class="btn bg-[#D2F8A0] w-full font-bold rounded-md">Donate Now</button>
+
+        </div>
+
+        </section>
+
+      <!-- Box Two -->
+        <section class="h-full lg:h-[450px] w-full p-3 lg:p-7 border rounded-xl grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Image Container -->
+        <div class="h-full lg:h-[395px] w-full">
+          <img class="h-full w-full" src="assets/feni.png" alt="">
+        </div>
+        <div class="flex flex-col justify-between gap-3 lg:gap-0">
+          <div class=" flex items-center gap-2 w-2/4 lg:w-3/12 bg-gray-100 p-1 rounded-md">
+            <img src="assets/coin.png" alt="">
+            <h2 id="BoxTwoBalance" class="font-semibold">600</h2>
+            <span>BTD</span>
+          </div>
+
+          <h3 id="TitleBoxTwo" class="font-extrabold">Donate for Flood Relief in Feni,Bangladesh</h3>
+
+          <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
+            help provide
+            essential supplies and to those affected by this disaster. Every contribution, big or small, makes
+            difference. Please
+            join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+          <input id="BoxTwoInputPart" type="text" placeholder="Write Donation Amount"
+            class="input input-bordered w-full " />
+
+          <button id="BoxTwoDonateNowButton" class="btn bg-[#D2F8A0] w-full font-bold rounded-md"
+            onclick="ModelTwo()">Donate
+            Now</button>
+
+        </div>
+
+        </section>
+
+      <!-- Card 3 -->
+        <section class="h-full lg:h-[450px] w-full p-3 lg:p-7 border rounded-xl grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Image Container -->
+        <div class="h-full lg:h-[395px] w-full">
+          <img class="h-full w-full" src="assets/quota-protest.png" alt="">
+        </div>
+        <div class="flex flex-col justify-between gap-3 lg:gap-0">
+          <div class=" flex items-center gap-2 w-2/4 lg:w-3/12 bg-gray-100 p-1 rounded-md">
+            <img src="assets/coin.png" alt="">
+            <h2 id="BoxThreeBalance" class="font-semibold">2400</h2>
+            <span>BTD</span>
+          </div>
+
+          <h3 id="TitleBoxThree" class="font-extrabold">Aid for Injured in the Quota Movement</h3>
+
+          <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
+            help provide
+            essential supplies and to those affected by this disaster. Every contribution, big or small, makes
+            difference. Please
+            join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+          <input id="BoxThreeInputPart" type="text" placeholder="Write Donation Amount"
+            class="input input-bordered w-full " />
+
+          <button id="BoxThreeDonateNowButton" class="btn bg-[#D2F8A0] w-full font-bold rounded-md"
+            onclick="ModelThree()">Donate
+            Now</button>
+
+        </div>
+
+        </section>
+
+      </article>
+
+      <article id="HistoryPart" class="mb-32  hidden">
+        <h1 class="flex justify-center">Donate History</h1>
+
+        <div id="HistoryList" class="flex flex-col gap-5 mt-8">
+
+        </div>
+
+      </article>
+
+    
+  </main>
+
+
+
+
+ 
+
+
+</body>
+
+</html>
