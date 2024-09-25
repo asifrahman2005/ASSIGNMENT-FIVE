@@ -5,6 +5,7 @@ document.getElementById('BoxOneDonateNowButton').addEventListener('click', funct
     const BoxOneTitle = CardTitleFunction('TitleBoxOne');
     const BoxOneInputPart = InputValueById('BoxOneInputPart');
 
+
     const MinNumber = NavbarBalance - BoxOneInputPart;
     const AddedNumber = BoxOneBalance + BoxOneInputPart;
 
@@ -33,6 +34,18 @@ document.getElementById('BoxOneDonateNowButton').addEventListener('click', funct
     
 })
 
+// Model 1
+function ModelBoxOne() {
+    
+    const NavbarBalance = InnerTextFunction('NavbarBalance');
+    const BoxOneBalance = InnerTextFunction('BoxOneBalance');
+    const BoxOneInputPart = InputValueById('BoxOneInputPart');
+    const OutputAddNumber = BoxOneBalance + BoxOneInputPart;
+  
+    if (OutputAddNumber > BoxOneBalance && BoxOneInputPart <= NavbarBalance) {
+      document.getElementById('my_modal_5').showModal();
+    }
+  }
 // Box Two 
 document.getElementById('BoxTwoDonateNowButton').addEventListener('click', function(){
     const NavbarBalance = InnerTextFunction('NavbarBalance');
@@ -67,6 +80,18 @@ document.getElementById('BoxTwoDonateNowButton').addEventListener('click', funct
     
 })
 
+// Model 2
+function ModelBoxTwo() {
+    
+    const NavbarBalance = InnerTextFunction('NavbarBalance');
+    const BoxTwoBalance = InnerTextFunction('BoxTwoBalance');
+    const BoxTwoInputPart = InputValueById('BoxTwoInputPart');
+    const OutputAddNumber = BoxTwoBalance + BoxTwoInputPart;
+  
+    if (OutputAddNumber > BoxTwoBalance && BoxTwoInputPart <= NavbarBalance) {
+      document.getElementById('my_modal_5').showModal();
+    }
+  }
 // Box Three
 document.getElementById('BoxThreeDonateNowButton').addEventListener('click', function(){
     const NavbarBalance = InnerTextFunction('NavbarBalance');
@@ -101,6 +126,18 @@ document.getElementById('BoxThreeDonateNowButton').addEventListener('click', fun
     
 })
 
+// Model 3
+function ModelBoxThree() {
+    
+    const NavbarBalance = InnerTextFunction('NavbarBalance');
+    const BoxThreeBalance = InnerTextFunction('BoxThreeBalance');
+    const BoxThreeInputPart = InputValueById('BoxThreeInputPart');
+    const OutputAddNumber = BoxThreeBalance + BoxThreeInputPart;
+  
+    if (OutputAddNumber > BoxThreeBalance && BoxThreeInputPart <= NavbarBalance) {
+      document.getElementById('my_modal_5').showModal();
+    }
+  }
 
 // Blog Btn 
 document.getElementById('headerBlogBtn').addEventListener('click', function(){
